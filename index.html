@@ -2,37 +2,151 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi primera web</title>
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
         body {
-            font-family: Arial;
+            font-family: Arial, sans-serif;
             text-align: center;
             background-color: #f2f2f2;
         }
-        h1 {
+        header {
+            background-color: #fff;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            padding: 16px 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        header a {
+            text-decoration: none;
             color: #333;
         }
-        button {
-            padding: 10px 20px;
-            background-color: blue;
-            color: white;
+        header h1 {
+            font-size: 1.4rem;
+        }
+        nav a {
+            text-decoration: none;
+            color: #555;
+            margin-left: 20px;
+            font-size: 0.95rem;
+        }
+        nav a:hover {
+            color: #2563eb;
+        }
+        .hero {
+            background: linear-gradient(135deg, #2563eb, #7c3aed);
+            color: #fff;
+            padding: 80px 24px;
+        }
+        .hero h2 {
+            font-size: 2.2rem;
+            margin-bottom: 12px;
+        }
+        .hero p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            margin-bottom: 24px;
+        }
+        .hero-btn {
+            display: inline-block;
+            padding: 14px 32px;
+            background: #fff;
+            color: #2563eb;
             border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: bold;
             cursor: pointer;
+            text-decoration: none;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .hero-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+        }
+        .features {
+            display: flex;
+            justify-content: center;
+            gap: 32px;
+            flex-wrap: wrap;
+            max-width: 900px;
+            margin: 48px auto;
+            padding: 0 24px;
+        }
+        .feature-card {
+            background: #fff;
+            padding: 32px 24px;
+            border-radius: 12px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+            flex: 1;
+            min-width: 220px;
+            max-width: 260px;
+        }
+        .feature-card span {
+            font-size: 2.5rem;
+            display: block;
+            margin-bottom: 12px;
+        }
+        .feature-card h3 {
+            font-size: 1.05rem;
+            margin-bottom: 8px;
+            color: #333;
+        }
+        .feature-card p {
+            font-size: 0.9rem;
+            color: #666;
+            line-height: 1.4;
+        }
+        footer {
+            padding: 32px;
+            color: #999;
+            font-size: 0.85rem;
         }
     </style>
 </head>
 <body>
 
-    <h1>Hola, esta es mi primera web 🚀</h1>
-    <p>Estoy aprendiendo a crear páginas web.</p>
+<header>
+    <a href="index.html"><h1>🛍️ Mi Tienda</h1></a>
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="shop.html">Tienda</a>
+    </nav>
+</header>
 
-    <button onclick="saludo()">Haz clic aquí</button>
+<section class="hero">
+    <h2>Hola, bienvenido a mi web 🚀</h2>
+    <p>Descubre productos increíbles a los mejores precios</p>
+    <a href="shop.html" class="hero-btn">Ir a la Tienda →</a>
+</section>
 
-    <script>
-        function saludo() {
-            alert("¡Bienvenido a mi web!");
-        }
-    </script>
+<div class="features">
+    <div class="feature-card">
+        <span>📦</span>
+        <h3>Envío Rápido</h3>
+        <p>Recibe tus productos en la puerta de tu casa.</p>
+    </div>
+    <div class="feature-card">
+        <span>💰</span>
+        <h3>Mejores Precios</h3>
+        <p>Productos de calidad a precios accesibles.</p>
+    </div>
+    <div class="feature-card">
+        <span>⭐</span>
+        <h3>Calidad Garantizada</h3>
+        <p>Satisfacción garantizada en cada compra.</p>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2026 Mi Tienda — Todos los derechos reservados</p>
+</footer>
 
 </body>
 </html>
